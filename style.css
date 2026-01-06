@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-    --primary-color: #4CAF50;
-    --secondary-color: #f4f4f4;
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
     --font-family: 'Lato', sans-serif;
 }
 
@@ -34,10 +34,9 @@ nav {
 }
 
 nav ul {
-    display:  flex;
-    align-self: center;
-    list-style-type: none;
-    gap: 2em;
+    display: flex;
+    gap: 1.5em;
+    list-style: none;
 }
 
 nav li:first-child {
@@ -47,26 +46,28 @@ nav li:first-child {
 }
 
 nav a {
-   text-decoration: none;
-   color: var(--text-color);
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
-nav a:hover{
+nav a:hover {
+    color: #000000;
     text-decoration: underline;
 }
 
-header, section{
-    margin: 2em auto;
-    width: min(75em, 100%);
-    background-color: var(--color-1);
-    padding: min(2em, 15%);
-    border-radius: 1em;
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(1000xp, 100%);
+    margin: 0 auto 2em auto;
 }
 
-.flex-container { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2em;
+h1 {
+    text-align: center;
+}
+
+nav li:first-child a {
+    font-weight: 700;
 }
