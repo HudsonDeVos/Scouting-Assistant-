@@ -1,0 +1,149 @@
+:root{
+    --background-color: white;
+    --color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 1em;
+    background-color: var(--background-color);
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+nav {
+    margin: 1em auto 3em auto;
+    width: min(1000px, 100%)
+}
+
+nav ul {
+    display: flex;
+    justify-content: left;
+    gap: 2em;
+    list-style: none;
+}
+
+nav a {
+    color: var(--color);
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+#team-info {
+    text-align: center;
+}
+
+#team-info input {
+    display: block;
+    width: 10%; 
+    height: 10%;         
+    margin: 0.5em auto;  
+    text-align: center;
+}
+
+#auto {
+    margin-top: 5em;
+    text-align: center;
+}
+
+#auto input {
+    display: block;
+    width: 10%;
+    height: 10%;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+#teleop {
+    margin-top: 5em;
+    text-align: center;
+}
+
+#teleop input {
+    display: block;
+    width: 10%;
+    height: 10%;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+#parking {
+    margin-top: 5em;
+    text-align: center;
+}
+
+#parking input {
+    display: inline-flex;
+    width: auto;
+    height: auto;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+#sorting {
+    margin-top: 5em;
+    text-align: center;
+}
+
+#sorting input {
+    display: inline-flex;
+    width: auto;
+    height: auto;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+#personal-teamwork-ranking {
+    margin-top: 5em;
+    text-align: center;
+}
+
+#personal-teamwork-ranking input {
+    display: inline-flex;
+    width: auto;
+    height: auto;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+#real-auto-score {
+    margin-top: 5em;
+    text-align: center;
+}
+
+#real-auto-score input {
+    display: block;
+    width: 10%;
+    height: 10%;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+#real-teleop-score {
+    margin-top: 5em;
+    text-align: center;
+}
+
+#real-teleop-score input {
+    display: block;
+    width: 10%;
+    height: 10%;
+    margin: 0.5em auto;
+    text-align: center;
+}

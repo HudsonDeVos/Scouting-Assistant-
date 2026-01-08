@@ -1,0 +1,47 @@
+:root{
+    --background-color: white;
+    --color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 1em;
+    background-color: var(--background-color);
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+nav {
+    margin: 1em auto 3em auto;
+    width: min(1000px, 100%)
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    list-style: none;
+}
+
+nav a {
+    color: var(--color);
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
