@@ -19,66 +19,7 @@
     <div id="output"></div>
     
 
-    <script>
-    const teams = JSON.parse(localStorage.getItem("scoutedTeams")) || [];
-    const output = document.getElementById("output");
-
-    if (teams.length === 0) {
-        output.innerHTML = `<p class="no-data">No teams have been saved yet.</p>`;
-    } else {
-        let tableHTML = `
-            <table>
-                <tr>
-                    <th>Team #</th>
-                    <th>Name</th>
-                    <th>Auto Score</th>
-                    <th>TeleOp Score</th>
-                    <th>Parks?</th>
-                    <th>Sorts?</th>
-                    <th>Real Auto</th>
-                    <th>Real TeleOp</th>
-                    <th>Teamwork Rating</th>
-                    <th>Edit Team</th>
-                    <th>Delete</th>
-                </tr>
-        `;
-
-        teams.forEach((team, index) => {
-            tableHTML += `
-                <tr>
-                    <td>${team.teamNumber}</td>
-                    <td>${team.teamName}</td>
-                    <td>${team.autoScore}</td>
-                    <td>${team.teleopScore}</td>
-                    <td>${team.parking}</td>
-                    <td>${team.sorting}</td>
-                    <td>${team.realAutoScore}</td>
-                    <td>${team.realTeleopScore}</td>
-                    <td>${team.teamworkRanking}</td>
-                    <td><button onclick="editTeam(${index})">Edit</button></td>
-                    <td><button onclick="deleteTeam(${index})">Delete</button></td>
-                </tr>
-            `;
-        });
-
-        tableHTML += `</table>`;
-        output.innerHTML = tableHTML;
-    }
-
-    function deleteTeam(index) {
-        if (!confirm("Are you sure you want to delete this team?")) return;
-
-        const teams = JSON.parse(localStorage.getItem("scoutedTeams")) || [];
-        teams.splice(index, 1);
-        localStorage.setItem("scoutedTeams", JSON.stringify(teams));
-        location.reload();
-    }
-
-    function editTeam(index) {
-        localStorage.setItem("editIndex", index);
-        window.location.href = "scout.html"; // go back to the form
-    }
-</script>
+<script src="rank.js"></script>
 
 </body>
 </html>
