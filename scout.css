@@ -147,3 +147,17 @@ nav a:hover {
     margin: 0.5em auto;
     text-align: center;
 }
+
+section {
+    max-width: 350px;
+    margin: 2em auto;
+    padding: 1em;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+section input[type="text"],
+section input[type="number"] {
+    width: 120px;
+    height: 30px;
+}
