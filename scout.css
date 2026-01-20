@@ -1,4 +1,4 @@
-:root{
+:root {
     --background-color: white;
     --color: black;
 }
@@ -19,20 +19,21 @@ body {
 }
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
 nav {
     margin: 1em auto 3em auto;
-    width: min(1000px, 100%)
+    width: min(1000px, 100%);
 }
 
 nav ul {
     display: flex;
-    justify-content: left;
-    gap: 2em;
     list-style: none;
+}
+
+nav li {
+    margin-right: 2em;
 }
 
 nav a {
@@ -45,119 +46,29 @@ nav a:hover {
     text-decoration: underline;
 }
 
-#team-info {
-    text-align: center;
-}
-
-#team-info input {
-    display: block;
-    width: 10%; 
-    height: 10%;         
-    margin: 0.5em auto;  
-    text-align: center;
-}
-
-#auto {
-    margin-top: 5em;
-    text-align: center;
-}
-
-#auto input {
-    display: block;
-    width: 10%;
-    height: 10%;
-    margin: 0.5em auto;
-    text-align: center;
-}
-
-#teleop {
-    margin-top: 5em;
-    text-align: center;
-}
-
-#teleop input {
-    display: block;
-    width: 10%;
-    height: 10%;
-    margin: 0.5em auto;
-    text-align: center;
-}
-
-#parking {
-    margin-top: 5em;
-    text-align: center;
-}
-
-#parking input {
-    display: inline-flex;
-    width: auto;
-    height: auto;
-    margin: 0.5em auto;
-    text-align: center;
-}
-
-#sorting {
-    margin-top: 5em;
-    text-align: center;
-}
-
-#sorting input {
-    display: inline-flex;
-    width: auto;
-    height: auto;
-    margin: 0.5em auto;
-    text-align: center;
-}
-
-#personal-teamwork-ranking {
-    margin-top: 5em;
-    text-align: center;
-}
-
-#personal-teamwork-ranking input {
-    display: inline-flex;
-    width: auto;
-    height: auto;
-    margin: 0.5em auto;
-    text-align: center;
-}
-
-#real-auto-score {
-    margin-top: 5em;
-    text-align: center;
-}
-
-#real-auto-score input {
-    display: block;
-    width: 10%;
-    height: 10%;
-    margin: 0.5em auto;
-    text-align: center;
-}
-
-#real-teleop-score {
-    margin-top: 5em;
-    text-align: center;
-}
-
-#real-teleop-score input {
-    display: block;
-    width: 10%;
-    height: 10%;
-    margin: 0.5em auto;
-    text-align: center;
-}
-
 section {
     max-width: 350px;
     margin: 2em auto;
     padding: 1em;
     border: 2px solid #000;
     border-radius: 10px;
+    text-align: center;
 }
 
-section input[type="text"],
-section input[type="number"] {
-    width: 120px;
-    height: 30px;
+/* Text + number inputs */
+input[type="text"],
+input[type="number"] {
+    width: 250px;
+    height: 40px;
+    font-size: 1.1rem;
+    padding: 5px;
+    display: block;
+    margin: 0.5em auto;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+    width: auto;
+    height: auto;
+    margin-left: 0.5em;
 }
