@@ -18,16 +18,21 @@
     </header>
 
     <main>
-
         <section id="team-info">
             <h2>Team Information</h2>
+
             <label for="team-number">Team Number:</label>
             <input type="text" id="team-number" name="team-number">
 
             <label for="team-name">Team Name:</label>
             <input type="text" id="team-name" name="team-name">
+
+            <!-- toggle button + container -->
+            <button id="about-team-info">about</button>
+            <div id="about-content"></div>
         </section>
 
+        <!-- rest of your sections unchanged -->
         <section id="auto">
             <h2>Auto Score</h2>
             <label for="auto-score">Team Theoretical Autonomous Score:</label>
@@ -41,9 +46,9 @@
         </section>
 
         <section id="parking">
-            <h2>Does Team Park</h2>
-            <label>Yes <input type="radio" name="parking" value="yes"></label>
-            <label>No <input type="radio" name="parking" value="no"></label>
+            <h2>Team Park Time</h2>
+            <label for="parking">Time to Park (seconds):</label>
+            <input type="number" id="parking" name="parking">
         </section>
 
         <section id="sorting">
@@ -66,7 +71,6 @@
 
         <section id="personal-teamwork-ranking">
             <h2>Did You Work With This Team Well</h2>
-
             <label><input type="radio" name="teamwork" value="1">1</label>
             <label><input type="radio" name="teamwork" value="2">2</label>
             <label><input type="radio" name="teamwork" value="3">3</label>
@@ -77,9 +81,9 @@
         <section id="save-section">
             <button id="save-team">Save Team</button>
         </section>
-
     </main>
 
     <script src="teamCreation.js"></script>
+    <script src="description.js"></script>
 </body>
 </html>
