@@ -11,7 +11,7 @@ if (isEditing) {
         document.getElementById("auto-score").value = team.autoScore;
         document.getElementById("teleop-score").value = team.teleopScore;
 
-        document.querySelector(`input[name="parking"][value="${team.parking}"]`)?.click();
+        document.getElementById("parking").value = team.parking;
         document.querySelector(`input[name="sorting"][value="${team.sorting}"]`)?.click();
 
         document.getElementById("real-auto-score").value = team.realAutoScore;
@@ -29,7 +29,7 @@ document.getElementById("save-team").addEventListener("click", function () {
         teamName: document.getElementById("team-name").value,
         autoScore: document.getElementById("auto-score").value,
         teleopScore: document.getElementById("teleop-score").value,
-        parking: document.querySelector('input[name="parking"]:checked')?.value || "",
+        parking: document.getElementById("parking").value,
         sorting: document.querySelector('input[name="sorting"]:checked')?.value || "",
         realAutoScore: document.getElementById("real-auto-score").value,
         realTeleopScore: document.getElementById("real-teleop-score").value,

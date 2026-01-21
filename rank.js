@@ -13,7 +13,7 @@ function calculateRankScore(team) {
     return (
         Number(team.realAutoScore) * weights.auto +
         Number(team.realTeleopScore) * weights.teleop +
-        (team.parking === "yes" ? weights.parking : 0) +
+        Number(team.parking) * weights.parking +
         (team.sorting === "yes" ? weights.sorting : 0) +
         Number(team.teamworkRanking) * weights.teamwork
     );
@@ -43,7 +43,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 <th>Name</th>
                 <th>Auto Score</th>
                 <th>TeleOp Score</th>
-                <th>Parks?</th>
+                <th>Park Time</th>
                 <th>Sorts?</th>
                 <th>Real Auto</th>
                 <th>Real TeleOp</th>
