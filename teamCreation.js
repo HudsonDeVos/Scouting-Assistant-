@@ -18,7 +18,7 @@ if (isEditing) {
         document.getElementById("real-teleop-score").value = team.realTeleopScore;
 
         document.querySelector(
-            `input[name="personal-teamwork-ranking"][value="${team.teamworkRanking}"]`
+        `input[name="teamworkRanking"][value="${team.teamworkRanking}"]`
         )?.click();
     }
 }
@@ -33,7 +33,7 @@ document.getElementById("save-team").addEventListener("click", function () {
         sorting: document.querySelector('input[name="sorting"]:checked')?.value || "",
         realAutoScore: document.getElementById("real-auto-score").value,
         realTeleopScore: document.getElementById("real-teleop-score").value,
-        teamworkRanking: document.querySelector('input[name="personal-teamwork-ranking"]:checked')?.value || ""
+        teamworkRanking: document.querySelector('input[name="teamworkRanking"]:checked')?.value || ""
     };
 
     let savedTeams = JSON.parse(localStorage.getItem("scoutedTeams")) || [];
@@ -48,4 +48,25 @@ document.getElementById("save-team").addEventListener("click", function () {
     localStorage.setItem("scoutedTeams", JSON.stringify(savedTeams));
 
     alert("Team saved!");
+
+    clearForm();
 });
+
+function clearForm() {
+    document.getElementById("team-number").value = "";
+    document.getElementById("team-name").value = "";
+    document.getElementById("auto-score").value = "";
+    document.getElementById("teleop-score").value = "";
+    document.getElementById("parking").value = "";
+    document.getElementById("real-auto-score").value = "";
+    document.getElementById("real-teleop-score").value = "";
+
+    // Clear sorting radios
+    document.querySelectorAll('input[name="sorting"]').forEach(r => r.checked = false);
+
+    // Clear teamwork radios
+    document.querySelectorAll('input[name="teamworkRanking"]').forEach(r => r.checked = false);
+
+    // Make sure editing mode is off
+    localStorage.removeItem("editIndex");
+}
