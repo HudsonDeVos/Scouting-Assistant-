@@ -11,7 +11,7 @@ if (isEditing) {
         document.getElementById("auto-score").value = team.autoScore;
         document.getElementById("teleop-score").value = team.teleopScore;
 
-        document.getElementById("parking").value = team.parking;
+       
         document.querySelector(`input[name="sorting"][value="${team.sorting}"]`)?.click();
 
         document.getElementById("real-auto-score").value = team.realAutoScore;
@@ -57,7 +57,6 @@ function clearForm() {
     document.getElementById("team-name").value = "";
     document.getElementById("auto-score").value = "";
     document.getElementById("teleop-score").value = "";
-    document.getElementById("parking").value = "";
     document.getElementById("real-auto-score").value = "";
     document.getElementById("real-teleop-score").value = "";
 

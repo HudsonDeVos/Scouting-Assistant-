@@ -5,19 +5,23 @@ function calculateRankScore(team) {
     const weights = {
         auto: 2,
         teleop: 1,
-        parking: 3,
         sorting: 3,
         teamwork: 1
     };
 
+    const auto = Number(team.realAutoScore) || 0;
+    const teleop = Number(team.realTeleopScore) || 0;
+    const sorting = team.sorting === "yes" ? weights.sorting : 0;
+    const teamwork = Number(team.teamworkRanking) || 0;
+
     return (
-        Number(team.realAutoScore) * weights.auto +
-        Number(team.realTeleopScore) * weights.teleop +
-        Number(team.parking) * weights.parking +
-        (team.sorting === "yes" ? weights.sorting : 0) +
-        Number(team.teamworkRanking) * weights.teamwork
+        auto * weights.auto +
+        teleop * weights.teleop +
+        sorting +
+        teamwork * weights.teamwork
     );
 }
+
 
 // Run this AFTER the page loads
 window.addEventListener("DOMContentLoaded", () => {
@@ -43,7 +47,6 @@ window.addEventListener("DOMContentLoaded", () => {
                 <th>Name</th>
                 <th>Auto Score</th>
                 <th>TeleOp Score</th>
-                <th>Park Time</th>
                 <th>Sorts?</th>
                 <th>Real Auto</th>
                 <th>Real TeleOp</th>
@@ -62,7 +65,6 @@ window.addEventListener("DOMContentLoaded", () => {
                 <td>${team.teamName}</td>
                 <td>${team.autoScore}</td>
                 <td>${team.teleopScore}</td>
-                <td>${team.parking}</td>
                 <td>${team.sorting}</td>
                 <td>${team.realAutoScore}</td>
                 <td>${team.realTeleopScore}</td>
